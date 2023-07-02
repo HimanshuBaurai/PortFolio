@@ -1,0 +1,60 @@
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    background: var(--bg-primary);
+  }
+  
+  .navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 20;
+    height: 80px;
+    width: 100%;
+  }
+  
+  .navbar .nav-menu {
+    display: flex;
+    align-items: center;
+    background: var(--bg-primary);
+  }
+  
+  .navbar .nav-link {
+    margin: 0 1rem;
+    font-size: 0.8rem;
+    font-weight: var(--weight-semibold);
+  }
+  
+  .navbar #logo img {
+    display: block;
+    width: 40px;
+  }
+  
+  .navbar .btn {
+    margin-right: 1.5rem;
+  }
+  
+  .fas.fa-arrow-right {
+    margin-left: 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  /* hamburger */
+  .hamburger {
+    margin-bottom: 0.1rem;
+    display: none;
+  }
+  
+  .bar {
+    display: block;
+    width: 23px;
+    height: 3px;
+    margin: 4px auto;
+    transition: all 0.3s ease-in-out;
+    border-radius: 30px;
+    background-color: var(--bg-secondary);
+  }
