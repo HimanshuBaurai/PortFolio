@@ -8,35 +8,26 @@ const Navbar = () => {
             <div class="container">
                 {/* <!-- Logo --> */}
                 <h1 id="logo">
-                    <a href="https://github.com/CommunityPro/portfolio-html"
+                    <a href="https://github.com/HimanshuBaurai"
                     >
-                    <img src='logo.png' alt="Your Logo"/>
+                    <img src='logo.svg' alt="My Logo"/>
                     </a>
                 </h1>
                 {/* <!-- Navbar links --> */}
                 <ul class="nav-menu">
                     <li><a class="nav-link" href="#projects">PROJECTS</a></li>
-                    <li><a class="nav-link" href="#">CONTACT</a></li>
-                    <li><a class="nav-link" href="#">BlOG</a></li>
+                    <li><a class="nav-link" href="#ContactCard">CONTACT</a></li>
+                    <li><a class="nav-link" href="#journey">JOURNEY</a></li>
                     <li>
                         <a
                             class="nav-link btn btn-primary"
-                            href="https://github.com/CommunityPro/portfolio-html"
-                        >RESUME <i class="fas fa-arrow-right"></i
-                        >
+                            href="https://drive.google.com/file/d/1KUfGm-jsXfaeKN5ngJfZPG2vH0KE-p93/view?usp=drive_link"
+                        >RESUME <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
 
                     {/* <!-- Toggle switch --> */}
-                    <DarkMode/>
-                    {/* <div class="theme-switch">
-                        <input type="checkbox" id="switch" />
-                        <label class="toggle-icons" for="switch">
-                            <img class="moon" src="../../../assets/Moon.svg" />
-                            <img class="sun" src="../../../assets/Sun.svg" />
-                        </label>
-                    </div> */}
-                    {/* <!-- Hamburger menu --> */}
+                    <DarkMode/> 
                 </ul>
                 <div class="hamburger">
                     <span class="bar"></span>

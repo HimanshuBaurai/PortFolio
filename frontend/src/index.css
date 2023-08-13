@@ -17,8 +17,8 @@ code {
 /* variables */
 :root {
   /* Colors */
-  --primary-color: #ffcd42;
-  --secondary-color: #ffd35c;
+  --primary-color: #F86F03;
+  --secondary-color: #FFA41B;
   --bg-primary: #ffffff;
   --text-color: #222222;
   --text-color-two: #ffffff;
@@ -40,8 +40,8 @@ code {
 }
 
 [data-theme="dark"] {
-  --primary-color: #ffcd42;
-  --secondary-color: #ffd35c;
+  --primary-color: #F86F03;
+  --secondary-color: #FFA41B;
   --bg-primary: #000000;
   --text-color: #ffffff;
   --text-color-two: #222222;

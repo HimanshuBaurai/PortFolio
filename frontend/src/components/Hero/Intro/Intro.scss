@@ -1,7 +1,7 @@
 #hero {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 100vh;
 }
 
 .profile-image {
@@ -9,6 +9,13 @@
     border-radius: 50%;
     animation: bounce 1s infinite alternate;
     // transition: opacity 0.5s ease-in-out;
+    margin-bottom: 3rem;
+}
+
+.content-text {
+    span {
+        color: var(--primary-color);
+    }
 }
 
 @keyframes bounce {
@@ -46,6 +53,7 @@
 
 .connect-btn {
     animation: cool-animation 5s infinite;
+    background-color: var(--primary-color);
 }
 
 @keyframes cool-animation {
@@ -83,4 +91,4 @@
         margin-top: 7rem;
         text-align: center;
     }
-}
+} 

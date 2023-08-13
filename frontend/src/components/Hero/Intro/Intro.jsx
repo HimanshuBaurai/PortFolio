@@ -13,10 +13,10 @@ const Intro = () => {
           src="profile-pic.jpg"
           alt="profile-pic"
         />
-        <h1>Hi I'm Himanshu Baurai</h1>
+        <h1>Hi, I'm Himanshu Baurai</h1> <span class="waving" data-hover="👋"></span>
 
         <div class="content-text">
-          <h2>An Undergraduate At Delhi Technological University</h2>
+          <h2>An Undergraduate At <span>Delhi Technological University</span></h2>
           {/* <h2>products, brands, and experience.</h2> */}
 
           <p>
@@ -24,7 +24,7 @@ const Intro = () => {
           </p>
         </div>
         <a
-          href="https://github.com/CommunityPro/portfolio-html"
+          href="#ContactCard"
           class="btn btn-secondary connect-btn"
           target="_blank"
         >Connect With Me</a>

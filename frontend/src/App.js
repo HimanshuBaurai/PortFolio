@@ -2,15 +2,16 @@ import './App.css';
 import Hero from './components/Hero/Intro/Intro.jsx'
 // import Skills from './components/Skills/Skills'
 // import Project from './components/Projects/Projects'
-// import ContactMe from './components/ContactMe/ContactMe'
+import ContactMeCard from './components/ContactMeCard/ContactMeCard'
 
 function App() {
   return (
     <div className="App">
+      {/* intro section */}
       <Hero />
-      {/* <Skills />
-      <Project />
-      <ContactMe /> */}
+      {/* <Skills /> */}
+      {/* <Project /> */}
+      <ContactMeCard />
     </div>
   );
 }
