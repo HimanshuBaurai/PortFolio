@@ -26,7 +26,6 @@ const Intro = () => {
         <a
           href="#ContactCard"
           class="btn btn-secondary connect-btn"
-          target="_blank"
         >Connect With Me</a>
       </section>
 

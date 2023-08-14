@@ -1,0 +1,85 @@
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 100px auto;
+
+    .Tcontainer {
+        padding: 10px 50px;
+        position: relative;
+        background: rgba(0, 0, 0, 0.3);
+        width: 50%;
+        border-radius: 4px;
+
+        .text-box{
+            padding: 20px 30px;
+            background: #fff;
+            position: relative;
+            border-radius: 6px;
+        }
+        // &:after{
+        //     content: '';
+        //     position: absolute;
+        //     width: 25px;
+        //     height: 25px;
+        //     right: -17px;
+        //     background: #fff;
+        //     border-radius: 50%;
+        //     top: 15px;
+        //     z-index: 1;
+        //     border: 3px solid #f4791f;
+        // }
+        // &:before{
+        //     content: '';
+        //     position: absolute;
+        //     width: 25px;
+        //     height: 25px;
+        //     right: -17px;
+        //     background: #f4791f;
+        //     border-radius: 50%;
+        //     top: 15px;
+        //     z-index: 1;
+        // }
+        // &:last-child{
+        //     padding-bottom: 0;
+        //     &:before{
+        //         display: none;
+        //     }
+        // }
+        // .content{
+        //     padding-bottom: 20px;
+        //     h2{
+        //         margin-top: 0;
+        //         color: #f4791f;
+        //     }
+        //     p{
+        //         margin: 0;
+        //         color: #666;
+        //         font-size: 14px;
+        //         line-height: 1.5;
+        //     }
+        // }
+    }
+
+    // .left{
+    //     left: 0;
+    //     .container{
+    //         &:after{
+    //             left: -16px;
+    //         }
+    //         &:before{
+    //             left: -16px;
+    //         }
+    //     }
+    // }
+    // .right{
+    //     left: 50%;
+    //     .container{
+    //         &:after{
+    //             right: -16px;
+    //         }
+    //         &:before{
+    //             right: -16px;
+    //         }
+    //     }
+    // }
+}

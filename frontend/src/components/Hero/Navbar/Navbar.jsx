@@ -22,6 +22,7 @@ const Navbar = () => {
                         <a
                             class="nav-link btn btn-primary"
                             href="https://drive.google.com/file/d/1KUfGm-jsXfaeKN5ngJfZPG2vH0KE-p93/view?usp=drive_link"
+                            target='_blank'
                         >RESUME <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
