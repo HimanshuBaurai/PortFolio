@@ -16,6 +16,7 @@ const Navbar = () => {
                 {/* <!-- Navbar links --> */}
                 <ul class="nav-menu">
                     <li><a class="nav-link" href="#projects">PROJECTS</a></li>
+                    <li><a class="nav-link" href="#skills">SKILLS</a></li>
                     <li><a class="nav-link" href="#ContactCard">CONTACT</a></li>
                     <li><a class="nav-link" href="#journey">JOURNEY</a></li>
                     <li>
@@ -27,9 +28,9 @@ const Navbar = () => {
                         </a>
                     </li>
 
+                </ul>
                     {/* <!-- Toggle switch --> */}
                     <DarkMode/> 
-                </ul>
                 <div class="hamburger">
                     <span class="bar"></span>
                     <span class="bar"></span>

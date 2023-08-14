@@ -66,8 +66,8 @@
     }
 
     .contact-card-inner-back {
-        background: #D7BBF5;
-        color: #333;
+        background: var(--container-color);
+        color: var(--text-color);
         padding: 20px 40px;
         transform: rotateY(180deg);
         display: flex;
