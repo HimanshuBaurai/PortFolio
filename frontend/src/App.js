@@ -10,10 +10,7 @@ import Project from './components/Projects/Projects'
 import { useEffect, useState } from 'react';
 
 function App() {
-  const [loading, setLoading] = useState(true);
-  // function to render loader only for 2sec
-  // setTimeout(() =>setLoading(!loading),3000)
-
+  const [loading, setLoading] = useState(true);  
   useEffect(() => {
     // // When the window finishes loading, hide the loader
     // window.addEventListener('load', () => {
@@ -36,7 +33,7 @@ function App() {
             <Hero />
             {/* journey TimeLine */}
             <TimeLine />
-            {/* <Skills /> */}
+            <Skills />
             {/* <Project /> */}
             <ContactMeCard />
           </div>
