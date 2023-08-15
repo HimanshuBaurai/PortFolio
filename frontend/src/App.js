@@ -6,7 +6,7 @@ import ContactMeCard from './components/ContactMeCard/ContactMeCard'
 import PreLoader from './components/PreLoader/PreLoader.jsx'
 import TimeLine from './components/TimeLine/TimeLine.jsx'
 import Skills from './components/Skills/Skills'
-import Project from './components/Projects/Projects'
+import Projects from './components/Projects/Projects'
 import { useEffect, useState } from 'react';
 
 function App() {
@@ -34,7 +34,7 @@ function App() {
             {/* journey TimeLine */}
             <TimeLine />
             <Skills />
-            {/* <Project /> */}
+            <Projects />
             <ContactMeCard />
           </div>
       }
