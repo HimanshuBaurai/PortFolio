@@ -21,7 +21,7 @@ function App() {
     //   // Cleanup: Remove the event listener when the component unmounts
     //   window.removeEventListener('load', () => { });
     // };
-    setTimeout(() => setLoading(!loading), 3000)
+    setTimeout(() => setLoading(!loading), 2500)
   }, []); // Empty dependency array ensures this effect runs once after initial render
 
   return (

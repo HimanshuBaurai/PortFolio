@@ -13,7 +13,7 @@ const Projects = () => {
             <img src='culturalAvenue.png' alt='G20 based project' />
             <div className='layer'>
               <h3>CulturalAvenue-G20</h3>
-              <p>Embark on a captivating cultural journey with our G20 Culture Showcase, powered by the dynamic ReactJS framework. Explore the rich tapestry of traditions, art, and heritage from around the world as we celebrate the diversity and vibrancy of the G20 nations.</p>
+              <p>Embark on a captivating cultural journey with our G20 Culture Showcase, powered by the dynamic ReactJS framework.</p>
               <a href='https://github.com/HimanshuBaurai/Cultural-Avenue' target='_blank'><FontAwesomeIcon icon={faLink} shake /></a>
             </div>
           </div>
@@ -21,7 +21,7 @@ const Projects = () => {
             <img src='Ecommerce.png' alt='Ecommerce Fullstack' />
             <div className='layer'>
               <h3>BeyondBuy-FullStack Ecommerce Portal</h3>
-              <p>Welcome to BeyondBuy, your gateway to an extraordinary shopping experience. Powered by the robust MERN stack, BeyondBuy is more than just an e-commerce platform – it's your ultimate destination for discovering, shopping, and connecting</p>
+              <p>Welcome to BeyondBuy, your gateway to an extraordinary shopping experience. Powered by the robust MERN stack, BeyondBuy is more than just an e-commerce platform.</p>
               <a href='https://github.com/HimanshuBaurai/Ecommerce-Project' target='_blank'><FontAwesomeIcon icon={faLink} shake /></a>
             </div>
           </div>
@@ -34,7 +34,7 @@ const Projects = () => {
             </div>
           </div>
         </div>
-        <a href='https://github.com/HimanshuBaurai' className='btn'>See more..</a>
+        <a href='https://github.com/HimanshuBaurai' target='_blank' className='btn'>See more..</a>
       </div>
     </div>
   )

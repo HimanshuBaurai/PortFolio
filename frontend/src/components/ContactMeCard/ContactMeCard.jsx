@@ -21,6 +21,7 @@ const ContactMeCard = () => {
 
             <div className='row'>
               <button>Follow</button>
+              <a href='https://github.com/HimanshuBaurai' target='_blank'><img src={'./icons8-github-50.png'} alt="LinkedIn icon" /></a>
               <a href='https://www.linkedin.com/in/himanshu-baurai-283b4022a' target='_blank'><img src={'./icons8-linkedin-100.png'} alt="LinkedIn icon" /></a>
               <a href='https://www.instagram.com/himanshu_baurai' target='_blank'><img src={'./instagram.png'} alt="Instagram icon" /></a>
             </div>
