@@ -32,14 +32,14 @@ const Navbar = () => {
                     <li><a class="nav-link" href="#skills" onClick={toggleMenu}>SKILLS</a></li>
                     <li><a class="nav-link" href="#ContactCard" onClick={toggleMenu}>CONTACT</a></li>
                     <li><a class="nav-link" href="#journey" onClick={toggleMenu}>JOURNEY</a></li>
-                    {/* <li>
+                    <li>
                         <a
                             class="nav-link btn btn-primary"
-                            href=""
+                            href="https://drive.google.com/file/d/1KUfGm-jsXfaeKN5ngJfZPG2vH0KE-p93/view?usp=drive_link"
                             target='_blank'
                         >RESUME <i class="fas fa-arrow-right"></i>
                         </a>
-                    </li> */}
+                    </li>
 
                     {/* <!-- Toggle switch --> */}
                     <DarkMode />
