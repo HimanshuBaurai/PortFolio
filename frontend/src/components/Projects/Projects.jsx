@@ -22,7 +22,7 @@ const Projects = () => {
             <div className='layer'>
               <h3>KnowledgeFlow</h3>
               <p>Unlock your potential with Knowledge Flow. Subscribe for high-quality courses and enhance your skills in various domains.</p>
-              <a href='https://knowledge-flow-online-course-platform-frontend.vercel.app/' target='_blank'><FontAwesomeIcon icon={faLink} shake /></a>
+              <a href='https://knowledgeflow.vercel.app' target='_blank'><FontAwesomeIcon icon={faLink} shake /></a>
             </div>
           </div>
           <div className='work'>
