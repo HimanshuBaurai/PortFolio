@@ -16,7 +16,7 @@ const ContactMeCard = () => {
             <h1>Himanshu <span>Baurai</span></h1>
             <div>
               <p>"A Tech Enthusiast with a Passion for Crafting Elegant Web Experiences."</p>
-              <span>Currently in 3rd Yr.</span>
+              <span>Currently in 4th Yr.</span>
             </div> 
 
             <div className='row'>
