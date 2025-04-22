@@ -3,6 +3,7 @@ import './Projects.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLink, faCode, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { useInView } from 'react-intersection-observer';
+import SEO from '../SEO.jsx'; // Adjust the path based on your file structure
 
 const ProjectCard = ({ project, index, isInView }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -136,38 +137,78 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="projects-section">
-      <div className="section-title">
-        <h2>Featured Projects</h2>
-        <div className="underline"></div>
-        <p>Showcasing my technical skills through real-world applications</p>
-      </div>
-
-      <div className="projects-container" ref={ref}>
-        <div className="projects-grid">
-          {projectsData.map((project, index) => (
-            <ProjectCard
-              key={index}
-              project={project}
-              index={index}
-              isInView={inView}
-            />
-          ))}
+    <>
+      <SEO 
+        title="Projects | Himanshu Baurai - Full Stack Developer & AI Engineer"
+        description="Explore Himanshu Baurai's portfolio of projects including Nexus AI multi-agent platform, KnowledgeFlow educational platform, and The Vegan Nexus lifestyle application."
+        keywords="Himanshu Baurai Projects, Nexus AI, KnowledgeFlow, The Vegan Nexus, MERN Stack Projects, AI Projects, LangChain, Multi-Agent Intelligence"
+        image="/nexus-ai.jpg"
+        type="website"
+      >
+        {/* Projects-specific structured data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "mainEntity": {
+              "@type": "ItemList",
+              "itemListElement": projectsData.map((project, index) => ({
+                "@type": "SoftwareSourceCode",
+                "position": index + 1,
+                "name": project.title,
+                "description": project.description,
+                "codeRepository": project.codeLink,
+                "url": project.liveLink,
+                "programmingLanguage": project.techStack.join(", "),
+                "author": {
+                  "@type": "Person",
+                  "name": "Himanshu Baurai"
+                },
+                "image": window.location.origin + "/" + project.image
+              }))
+            },
+            "about": {
+              "@type": "Thing",
+              "name": "Software Development Projects",
+              "description": "Collection of full-stack development and AI projects by Himanshu Baurai"
+            }
+          })}
+        </script>
+      </SEO>
+      
+      <section id="projects" className="projects-section">
+        <div className="section-title">
+          <h2>Featured Projects</h2>
+          <div className="underline"></div>
+          <p>Showcasing my technical skills through real-world applications</p>
         </div>
 
-        <div className="more-projects">
-          <a
-            href="https://github.com/HimanshuBaurai"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-more"
-          >
-            <span>View More Projects</span>
-            <FontAwesomeIcon icon={faArrowRight} className="arrow-icon" />
-          </a>
+        <div className="projects-container" ref={ref}>
+          <div className="projects-grid">
+            {projectsData.map((project, index) => (
+              <ProjectCard
+                key={index}
+                project={project}
+                index={index}
+                isInView={inView}
+              />
+            ))}
+          </div>
+
+          <div className="more-projects">
+            <a
+              href="https://github.com/HimanshuBaurai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-more"
+            >
+              <span>View More Projects</span>
+              <FontAwesomeIcon icon={faArrowRight} className="arrow-icon" />
+            </a>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

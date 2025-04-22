@@ -1,3 +1,160 @@
+// /* Navbar */
+// .navbar {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   z-index: 100; // Increased z-index to ensure it stays on top
+//   background: var(--bg-primary);
+//   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+//   transition: background 0.3s ease, box-shadow 0.3s ease;
+//   backdrop-filter: blur(10px);
+//   -webkit-backdrop-filter: blur(10px);
+// }
+
+// .navbar .container {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   height: 80px;
+//   width: 100%;
+//   padding: 0 2rem;
+// }
+
+// .navbar .nav-menu {
+//   display: flex;
+//   align-items: center;
+//   background: transparent; // Changed from var(--bg-primary) to transparent
+// }
+
+// .navbar .nav-link {
+//   margin: 0 1rem;
+//   font-size: 0.85rem;
+//   font-weight: var(--weight-semibold);
+//   transition: 0.3s ease;
+//   position: relative;
+  
+//   &::after {
+//     content: '';
+//     position: absolute;
+//     width: 0;
+//     height: 2px;
+//     bottom: -4px;
+//     left: 0;
+//     background-color: var(--primary-color);
+//     transition: width 0.3s ease;
+//   }
+  
+//   &:hover::after {
+//     width: 100%;
+//   }
+// }
+
+// .nav-link:hover {
+//   color: var(--primary-color);
+// }
+
+// .navbar #logo img {
+//   display: block;
+//   width: 200px; // Slightly reduced size
+//   transition: transform 0.3s ease;
+  
+//   &:hover {
+//     transform: scale(1.05);
+//   }
+// }
+
+// .navbar .btn {
+//   margin-right: 1.5rem;
+//   padding: 0.6rem 1.2rem;
+//   border-radius: 50px;
+//   font-size: 0.8rem;
+//   letter-spacing: 0.5px;
+//   transition: all 0.3s ease;
+  
+//   &:hover {
+//     transform: translateY(-2px);
+//     box-shadow: 0 4px 12px rgba(var(--primary-color-rgb, 248, 111, 3), 0.25);
+//   }
+// }
+
+// .fas.fa-arrow-right {
+//   margin-left: 0.5rem;
+//   font-size: 0.9rem;
+//   transition: transform 0.3s ease;
+// }
+
+// .navbar .btn:hover .fas.fa-arrow-right {
+//   transform: translateX(3px);
+// }
+
+// /* hamburger */
+// .hamburger {
+//   margin-bottom: 0.1rem;
+//   display: none;
+//   cursor: pointer;
+//   z-index: 101;
+// }
+
+// .bar {
+//   display: block;
+//   width: 25px;
+//   height: 3px;
+//   margin: 5px auto;
+//   transition: all 0.3s ease-in-out;
+//   border-radius: 30px;
+//   background-color: var(--text-color); // Changed to text-color for better theme compatibility
+// }
+
+// @media screen and (max-width:700px) {
+//   .hamburger {
+//     display: block;
+//   }
+
+//   .hamburger.active .bar {
+//     &:nth-child(1) {
+//       transform: translateY(8px) rotate(45deg);
+//     }
+
+//     &:nth-child(2) {
+//       opacity: 0;
+//     }
+
+//     &:nth-child(3) {
+//       transform: translateY(-8px) rotate(-45deg);
+//     }
+//   }
+  
+//   .nav-menu {
+//     position: fixed;
+//     left: -100%; // make it out of sight
+//     top: 0; // Changed from 70px to 0
+//     gap: 0;
+//     flex-direction: column;
+//     width: 100%;
+//     height: 100vh; // Full height
+//     text-align: center;
+//     transition: 0.4s;
+//     background: var(--bg-primary); // Ensure background is set
+//     padding-top: 100px; // Add padding to push content below navbar
+//     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+//     z-index: 99; // Below navbar but above other content
+//   }
+  
+//   .nav-link {
+//     margin: 16px 0;
+//     font-size: 1.1rem; // Larger font for mobile
+//   }
+  
+//   .nav-menu.active {
+//     left: 0;
+//   }
+  
+//   .navbar .btn {
+//     margin: 20px 0;
+//   }
+// }
+
 /* Navbar */
 .navbar {
   position: fixed;
@@ -106,7 +263,66 @@
   background-color: var(--text-color); // Changed to text-color for better theme compatibility
 }
 
-@media screen and (max-width:900px) {
+/* Sidebar overlay */
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 98;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar-overlay.active {
+  opacity: 1;
+}
+
+/* Sidebar header */
+.sidebar-header {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+.close-sidebar {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  padding: 0;
+}
+
+.close-sidebar span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--text-color);
+  border-radius: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.close-sidebar span:last-child {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+@media screen and (max-width:800px) {
   .hamburger {
     display: block;
   }
@@ -125,32 +341,58 @@
     }
   }
   
-  .nav-menu {
+  .sidebar-overlay {
+    display: block;
+  }
+  
+  .sidebar-header {
+    display: flex;
+  }
+  
+  .nav-menu.sidebar {
     position: fixed;
-    left: -100%; // make it out of sight
-    top: 0; // Changed from 70px to 0
+    right: -280px; // Start off-screen on the right
+    top: 0;
     gap: 0;
     flex-direction: column;
+    width: 280px; // Fixed width for sidebar
+    height: 100vh;
+    text-align: left; // Left-aligned text
+    transition: right 0.3s ease;
+    background: var(--bg-primary);
+    padding-top: 0; // No top padding since we have a header
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 99;
+    align-items: flex-start; // Left-aligned items
+  }
+  
+  .nav-menu.sidebar li {
     width: 100%;
-    height: 100vh; // Full height
-    text-align: center;
-    transition: 0.4s;
-    background: var(--bg-primary); // Ensure background is set
-    padding-top: 100px; // Add padding to push content below navbar
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    z-index: 99; // Below navbar but above other content
+    padding: 0 20px;
   }
   
-  .nav-link {
+  .nav-menu.sidebar .nav-link {
     margin: 16px 0;
-    font-size: 1.1rem; // Larger font for mobile
+    font-size: 1rem;
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   }
   
-  .nav-menu.active {
-    left: 0;
+  .nav-menu.sidebar.active {
+    right: 0; // Slide in from right
   }
   
   .navbar .btn {
-    margin: 20px 0;
+    margin: 20px;
+    width: calc(100% - 40px);
+    text-align: center;
+  }
+  
+  /* DarkMode component styling in sidebar */
+  .nav-menu.sidebar > div:last-child {
+    margin: 20px;
+    align-self: center;
   }
 }

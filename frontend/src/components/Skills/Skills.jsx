@@ -1,65 +1,7 @@
-// import React from 'react'
-// import './Skills.scss'
-
-// const Skills = () => {
-//   return (
-//     <div id='skills'>
-//       <h1>Skills</h1>
-//       <div className='Scontainer'>
-//         <div className='skills'>
-//           <h2>HTML</h2>
-//           <div className='progressBar'>
-//             <div className='html'>
-//               <span>86%</span>
-//             </div>
-//           </div>
-//           <h2>CSS</h2>
-//           <div className='progressBar'>
-//             <div className='css'>
-//               <span>74%</span>
-//             </div>
-//           </div>
-//           <h2>JavaScript</h2>
-//           <div className='progressBar'>
-//             <div className='js'>
-//               <span>70%</span>
-//             </div>
-//           </div>
-//           <h2>ReactJS</h2>
-//           <div className='progressBar'>
-//             <div className='react'>
-//               <span>71%</span>
-//             </div>
-//           </div>
-//           <h2>NodeJS & ExpressJS</h2>
-//           <div className='progressBar'>
-//             <div className='node'>
-//               <span>69%</span>
-//             </div>
-//           </div>
-//           <h2>Git/GitHub</h2>
-//           <div className='progressBar'>
-//             <div className='git'>
-//               <span>63%</span>
-//             </div>
-//           </div>
-//           <h2>C/C++</h2>
-//           <div className='progressBar'>
-//             <div className='c'>
-//               <span>89%</span>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   )
-// }
-
-// export default Skills
-
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './Skills.scss';
 import { useInView } from 'react-intersection-observer';
+import SEO from '../SEO.jsx'; // Adjust the path based on your file structure
 
 const SkillCategory = ({ title, skills, isInView }) => {
   return (
@@ -163,27 +105,67 @@ const Skills = () => {
     }
   ];
 
+  // Create flattened skills array for structured data
+  const allSkills = skillsData.flatMap(category => 
+    category.skills.map(skill => ({
+      name: skill.name,
+      proficiencyLevel: skill.level
+    }))
+  );
+
   return (
-    <section id="skills" className="skills-section" ref={ref}>
-      <div className="section-title">
-        <h2>Technical Skills</h2>
-        <div className="underline"></div>
-        <p>My technical toolkit and expertise</p>
-      </div>
-
-      <div className="skills-container">
-        {skillsData.map((category, index) => (
-          <SkillCategory
-            key={index}
-            title={category.category}
-            skills={category.skills}
-            isInView={inView}
-          />
-        ))}
-      </div>
-
+    <>
+      <SEO 
+        title="Skills & Expertise | Himanshu Baurai - Full Stack & AI Developer"
+        description="Explore Himanshu Baurai's technical skills in Frontend Development, Backend Development, AI & Machine Learning, and Programming Tools. Proficient in React, Node.js, Python, LangChain, and more."
+        keywords="Himanshu Baurai Skills, Full Stack Development, MERN Stack, AI Development, LangChain, React, Node.js, C++, Python, Technical Skills"
+        type="website"
+      >
+        {/* Skills-specific structured data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfilePage",
+            "mainEntity": {
+              "@type": "Person",
+              "name": "Himanshu Baurai",
+              "knowsAbout": allSkills.map(skill => skill.name),
+              "hasSkill": allSkills.map(skill => ({
+                "@type": "DefinedTerm",
+                "name": skill.name,
+                "description": `${skill.name} with ${skill.proficiencyLevel}% proficiency`
+              }))
+            },
+            "about": {
+              "@type": "Thing",
+              "name": "Technical Skills",
+              "description": "Technical skills and expertise of Himanshu Baurai in Frontend Development, Backend Development, AI & Machine Learning, and Programming Tools"
+            }
+          })}
+        </script>
+      </SEO>
       
-    </section>
+      <section id="skills" className="skills-section" ref={ref}>
+        <div className="section-title">
+          <h2>Technical Skills</h2>
+          <div className="underline"></div>
+          <p>My technical toolkit and expertise</p>
+        </div>
+
+        <div className="skills-container">
+          {skillsData.map((category, index) => (
+            <SkillCategory
+              key={index}
+              title={category.category}
+              skills={category.skills}
+              isInView={inView}
+            />
+          ))}
+        </div>
+
+        
+      </section>
+    </>
   );
 };
 
